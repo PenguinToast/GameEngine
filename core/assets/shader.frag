@@ -160,8 +160,8 @@ float heightMapTracing(vec3 ori, vec3 dir, out vec3 p) {
 
 void main() {
     vec2 uv = vTexCoord;
+    uv.y = 1.0 - uv.y;
     uv = uv * 2.0 - 1.0;
-    uv.y = 0.5 - uv.y;
     uv.x *= iResolution.x / iResolution.y;    
     // float time = iGlobalTime * 0.3;
     float time = iGlobalTime * 0.1;
